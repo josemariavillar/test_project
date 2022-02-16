@@ -1,0 +1,10 @@
+com:
+  company:
+    other:
+      name: project-test
+      logging:
+        kafka:
+          uniqueTopic: a-topic
+          #TODO bug pending          topic: a-topic #This property disappear
+          properties:
+            one.other: true

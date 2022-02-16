@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: test-openwrite
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri:
+      fail-fast: false
