@@ -12,4 +12,7 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
+	public static void printLine(final String line) {
+		System.out.println(line);
+	}
 }
