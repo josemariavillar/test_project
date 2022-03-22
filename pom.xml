@@ -22,7 +22,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<rewrite-maven-plugin.version>4.20.0</rewrite-maven-plugin.version>
+		<rewrite-maven-plugin.version>4.21.0-SNAPSHOT</rewrite-maven-plugin.version>
 
 		<infinispan.version>9.4.21.Final-redhat-00002</infinispan.version>
 		<spring-cloud.version>Hoxton.SR9</spring-cloud.version>
