@@ -22,7 +22,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<rewrite-maven-plugin.version>4.21.0-SNAPSHOT</rewrite-maven-plugin.version>
+		<rewrite-maven-plugin.version>4.21.0</rewrite-maven-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -49,9 +49,16 @@
 				<version>${rewrite-maven-plugin.version}</version>
 				<configuration>
 					<activeRecipes>
-						<recipe>com.example.ExcludeDependency</recipe>
+						<recipe>org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_5</recipe>
 					</activeRecipes>
 				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.openrewrite.recipe</groupId>
+						<artifactId>rewrite-spring</artifactId>
+						<version>4.18.0</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
