@@ -1,16 +1,8 @@
 ########################################################################################################################
 type: specs.openrewrite.org/v1beta/recipe
-name: com.yourorg.UpgradePom
+name: com.yourorg.UpgradePOM
 displayName: Upgrade POM
 recipeList:
-  - org.openrewrite.maven.AddDependency:
-      groupId: org.springframework.boot
-      artifactId: spring-boot-starter-webflux
-      version: 2.3.X
-      onlyIfUsing: org.springframework.boot.*
-
-  - org.openrewrite.maven.AddDependency:
-      groupId: org.springframework.boot
-      artifactId: spring-cloud-starter-config
-      version: 2.2.8.RELEASE
-      onlyIfUsing: org.springframework.boot.*
+  - org.openrewrite.maven.RemoveDependency:
+      groupId: org.springframework.cloud
+      artifactId: spring-cloud-dependencies
