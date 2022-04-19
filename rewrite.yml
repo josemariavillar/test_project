@@ -1,8 +1,30 @@
+---
+type: specs.openrewrite.org/v1beta/style
+name: com.yourorg.style.Import
+styleConfigs:
+  - org.openrewrite.java.style.ImportLayoutStyle:
+      classCountToUseStarImport: 999
+      nameCountToUseStarImport: 999
+
 ########################################################################################################################
+---
 type: specs.openrewrite.org/v1beta/recipe
-name: com.yourorg.UpgradePOM
-displayName: Upgrade POM
+name: com.yourorg.java.ChangeType
+displayName: ChangeType
 recipeList:
-  - org.openrewrite.maven.RemoveDependency:
-      groupId: org.springframework.cloud
-      artifactId: spring-cloud-dependencies
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: java.lang.Boolean
+      newFullyQualifiedTypeName: com.test.project.utils.BooleanUtil
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: java.lang.Integer
+      newFullyQualifiedTypeName: com.test.project.utils.IntegerUtil
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: java.lang.Long
+      newFullyQualifiedTypeName: com.test.project.utils.LongUtil
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: java.lang.Double
+      newFullyQualifiedTypeName: com.test.project.utils.DoubleUtil
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: java.lang.Float
+      newFullyQualifiedTypeName: com.test.project.utils.FloatUtil
+

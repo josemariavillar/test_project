@@ -65,8 +65,11 @@
 				<version>${rewrite-maven-plugin.version}</version>
 				<configuration>
 					<activeRecipes>
-						<recipe>com.yourorg.UpgradePOM</recipe>
+						<recipe>com.yourorg.java.ChangeType</recipe>
 					</activeRecipes>
+					<activeStyles>
+						<style>com.yourorg.style.Import</style>
+					</activeStyles>
 				</configuration>
 			</plugin>
 		</plugins>

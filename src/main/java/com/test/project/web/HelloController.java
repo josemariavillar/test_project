@@ -10,7 +10,14 @@ public class HelloController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String sayHello() {
+
+		Boolean file1;
+		Integer file2;
+		Long util3;
+		Double util4;
+		Float util5;
+
+
 		return "Hello world!";
 	}
-
 }
