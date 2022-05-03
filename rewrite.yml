@@ -3,13 +3,19 @@ type: specs.openrewrite.org/v1beta/recipe
 name: com.yourorg.UpgradePom
 displayName: Upgrade POM
 recipeList:
-  - org.openrewrite.maven.AddDependency:
-      groupId: io.springfox
-      artifactId: springfox-swagger2
-      version: 2.7.0
-      onlyIfUsing: org.springframework.*
-  - org.openrewrite.maven.AddDependency:
-      groupId: io.springfox
-      artifactId: springfox-swagger-ui
-      version: 2.7.0
-      onlyIfUsing: org.springframework.*
+  - org.openrewrite.maven.ChangeParentPom:
+      oldGroupId: org.springframework.boot
+      oldArtifactId: spring-boot-starter-parent
+      newVersion: 2.6.6
+
+  - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
+        oldGroupId: org.apache.httpcomponents
+        oldArtifactId: httpclient
+        newGroupId: org.apache.httpcomponents.client5
+        newArtifactId: httpclient5
+
+  - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
+      oldGroupId: com.oracle.ojdbc
+      oldArtifactId: ojdbc8
+      newGroupId: com.oracle.database.jdbc
+      newArtifactId: ojdbc8
